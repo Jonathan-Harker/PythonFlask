@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img {
+                width: 30%;
+                height: auto;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            } 
+
+        </style>    
+    </head>
+    
+    <body>
+        <h1>A Python Flask App by Jonathan Harker</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Thumbnail</th>
+                <th>Email</th>
+                <th>Full Name</th>
+            </tr>    
+            {% for p in ppl %}
+                <tr>
+                    <td>{{p[0]}}</td> 
+                    <td><img src="{{p[1]}}"></img></td>
+                    <td>{{p[2]}}</td>
+                    <td>{{p[3]}}</td>        
+                </tr>
+            {% endfor %}    
+        </table>    
+    </body>
+</html>
